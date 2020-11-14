@@ -1,6 +1,29 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "angular-custom-controls": {
+      "projectType": "library",
+      "root": "libs/angular-custom-controls",
+      "sourceRoot": "libs/angular-custom-controls/src",
+      "prefix": "jsc",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/angular-custom-controls/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/angular-custom-controls/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
@@ -10,7 +33,9 @@
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "strict": true
     }
-  }
+  },
+  "defaultProject": "angular-custom-controls"
 }

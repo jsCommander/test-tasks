@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@test-tasks/angular-custom-controls": [
+        "libs/angular-custom-controls/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
