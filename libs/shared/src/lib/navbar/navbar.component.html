@@ -1,0 +1,7 @@
+<div class="navbar">
+  <ng-container *ngFor="let link of links">
+    <a [routerLink]="[link.path]" class="link">
+      {{ link.name }}
+    </a>
+  </ng-container>
+</div>

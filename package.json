@@ -24,7 +24,8 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "deploy": "push-dir --dir=dist/apps/angular-test-example --cleanup --branch=gh-pages"
   },
   "private": true,
   "dependencies": {
@@ -62,6 +63,7 @@
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.1",
     "prettier": "2.0.4",
+    "push-dir": "^0.4.1",
     "ts-jest": "26.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",

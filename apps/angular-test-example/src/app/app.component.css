@@ -1,3 +1,14 @@
 :host {
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.navbar {
+  flex-grow: 0;
+  margin-bottom: 1rem;
+}
+
+.content {
+  flex-grow: 1;
 }

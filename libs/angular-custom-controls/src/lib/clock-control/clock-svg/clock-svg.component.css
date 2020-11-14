@@ -1,10 +1,12 @@
 :host {
-  display: block;
+  display: flex;
+  flex-flow: column;
   cursor: default;
 }
 
 .svg-wrapper {
   outline: none;
+  color: transparent;
 }
 
 .hour-arm-container,

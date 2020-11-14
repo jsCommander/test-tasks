@@ -1,1 +1,7 @@
-<jsc-clock-svg [time]="time$ | async" (onTimeChange)="onTimeChange($event)"></jsc-clock-svg>
+<jsc-clock-svg [time]="setTime$ | async" (onTimeChange)="onTimeChange($event)"></jsc-clock-svg>
+
+<div class="select-wrapper">
+  <select [formControl]="timeType" class="select">
+    <option *ngFor="let timeType of timeTypes" [value]="timeType.type">{{ timeType.name }}</option>
+  </select>
+</div>

@@ -39,10 +39,7 @@
             "polyfills": "apps/angular-test-example/src/polyfills.ts",
             "tsConfig": "apps/angular-test-example/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/angular-test-example/src/favicon.ico",
-              "apps/angular-test-example/src/assets"
-            ],
+            "assets": ["apps/angular-test-example/src/favicon.ico", "apps/angular-test-example/src/assets"],
             "styles": ["apps/angular-test-example/src/styles.css"],
             "scripts": []
           },
@@ -131,6 +128,28 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/angular-test-example-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "shared": {
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "prefix": "shared",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

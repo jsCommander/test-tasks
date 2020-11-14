@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavLink } from '@test-tasks/shared';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'ate-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-test-example';
+  caption: string = 'Test tasks';
+  links$ = new BehaviorSubject<NavLink[]>([
+    {
+      path: 'clock',
+      name: 'Analog clock control',
+    },
+    {
+      path: 'clock',
+      name: 'Build monitor widget',
+    },
+  ]);
 }

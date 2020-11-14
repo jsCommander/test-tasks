@@ -1,7 +1,17 @@
 :host {
   display: flex;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
   width: 300px;
   border: 0.1rem solid black;
   border-radius: 1rem;
+}
+
+.select-wrapper {
+  padding: 10px 0px;
+}
+
+.select {
+  font-size: 1.5em;
 }

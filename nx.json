@@ -32,6 +32,9 @@
     "angular-test-example-e2e": {
       "tags": [],
       "implicitDependencies": ["angular-test-example"]
+    },
+    "shared": {
+      "tags": []
     }
   }
 }

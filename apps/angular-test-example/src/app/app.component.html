@@ -1,1 +1,6 @@
-<jsc-clock-control></jsc-clock-control>
+<div class="navbar">
+  <shared-navbar [links]="links$ | async"></shared-navbar>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

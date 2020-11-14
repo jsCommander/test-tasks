@@ -1,11 +1,11 @@
-<div class="svg-wrapper" #container contentEditable>
-  <svg
-    (click)="setSelected(CLOCK_SELECT_TYPE.NONE, $event)"
-    class="clock"
-    width="300"
-    height="300"
-    viewBox="0 0 600 600"
-  >
+<div
+  (click)="setSelected(CLOCK_SELECT_TYPE.NONE, $event)"
+  (blur)="setSelected(CLOCK_SELECT_TYPE.NONE, $event)"
+  class="svg-wrapper"
+  #container
+  contentEditable
+>
+  <svg class="clock" width="300" height="300" viewBox="0 0 600 600">
     <g class="clock-face">
       <circle class="circle" cx="300" cy="300" r="253.9" />
       <path
