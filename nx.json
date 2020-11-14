@@ -25,6 +25,13 @@
   "projects": {
     "angular-custom-controls": {
       "tags": []
+    },
+    "angular-test-example": {
+      "tags": []
+    },
+    "angular-test-example-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-test-example"]
     }
   }
 }
