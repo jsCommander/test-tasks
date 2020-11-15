@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #fff;
+  background: grey;
+}
+
+.project-item {
+  padding: 0.5em 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: relative;
+}
+
+.project-tooltip {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  padding: 1em;
+  border-radius: 1em;
+  left: 90%;
+}
+
+.project-tooltip::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.project-item:hover .project-tooltip {
+  opacity: 1;
+}
+.project-tooltip-item {
+  white-space: nowrap;
+}
+
+.project-name {
+  padding-left: 1em;
+}

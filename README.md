@@ -12,7 +12,7 @@ Live demo [here](https://jscommander.github.io/test-tasks/#/clock)
 
 ## Angular CI widget
 
-Live demo [here](https://jscommander.github.io/test-tasks/test-tasks#/clock)
+Live demo [here](https://jscommander.github.io/test-tasks/#/ci-widget)
 
 ### Description
 

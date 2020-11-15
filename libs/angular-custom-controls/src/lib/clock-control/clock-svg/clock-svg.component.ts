@@ -85,6 +85,8 @@ export class ClockSvgComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   handleKeyBoardEvent(event: KeyboardEvent) {
+    event.stopPropagation();
+    event.preventDefault();
     if (event.key === 'ArrowUp') {
       this.changeTime$.next(1);
     }

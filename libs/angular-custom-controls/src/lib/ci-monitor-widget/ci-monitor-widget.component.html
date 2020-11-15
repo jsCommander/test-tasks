@@ -1,0 +1,19 @@
+<div class="project-list">
+  <div class="header">{{ caption }}</div>
+  <div *ngFor="let project of mappedBuildData$ | async; trackBy: trackBy" class="project-item">
+    <div class="project-tooltip">
+      <div *ngFor="let build of project.latestBuilds" class="project-tooltip-item">
+        time: {{ build.time }}, success: {{ build.isSuccessBuild }}
+      </div>
+    </div>
+
+    <jsc-status-circle
+      [radius]="40"
+      [text]="project.successBuildsPercent + '%'"
+      [color]="getStatusColor(project.successBuildsPercent)"
+    ></jsc-status-circle>
+    <div class="project-name">
+      {{ project.projectName }}
+    </div>
+  </div>
+</div>

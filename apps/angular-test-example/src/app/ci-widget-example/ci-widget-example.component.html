@@ -1,0 +1,11 @@
+<jsc-ci-monitor-widget
+  [buildData]="buildDataStream$ | async"
+  [customConfig]="customConfig"
+  class="monitor"
+></jsc-ci-monitor-widget>
+<div class="build-list-wrapper">
+  <div class="build-list-header">Last {{ logBuildCount }} builds</div>
+  <div *ngFor="let build of lastBuildsForLog$ | async" class="build-list-item">
+    projectId: {{ build.projectId }}, isSuccessBuild: {{ build.isSuccessBuild }}
+  </div>
+</div>

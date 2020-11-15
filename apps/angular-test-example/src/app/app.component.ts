@@ -15,7 +15,7 @@ export class AppComponent {
       name: 'Analog clock control',
     },
     {
-      path: 'clock',
+      path: 'ci-widget',
       name: 'Build monitor widget',
     },
   ]);
